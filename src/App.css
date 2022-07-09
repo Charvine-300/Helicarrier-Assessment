@@ -1,13 +1,79 @@
-.App {
+
+/*==========  ID Rules ==========*/
+#search-term {
+  width: 250px;
+  height: 40px;
+  display: block;
+  margin: auto;
+  padding: 0px 10px;
+  background-color: #ffffff;
+  border: 1px solid transparent;
+  font-family: 'Edu TAS Beginner', cursive;
+  box-shadow: 1px 9px 15px 5px rgb(0 0 0 / 30%);
+}
+
+
+
+
+
+/*==========  Class Rules ==========*/
+.App-header {
+  width: 80%;;
+  display: flex;
+  margin: 40px auto;
+  align-items: center;
+  justify-content: space-around;
+  font-size: calc(10px + 2vmin);
+}
+
+.App-header img {
+  width: 70px;
+  height: 70px;
+}
+
+.App-header div {
+  width: 70%;
+  height: 70px;
+  color: #000000;
   text-align: center;
+  background-color: #ffffff;
+  font-family: 'Edu TAS Beginner', cursive;
+  border-radius: 5px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+/*==========  Element Rules ==========*/
+header {
+  width: 90%;
+  height: fit-content;
+  margin: 5% auto;
+  text-align: center;
+  font-family: 'Schwifty', 'sans-serif';
 }
 
-@media (prefers-reduced-motion: no-preference) {
+h1 {
+  font-size: 50px;
+  color: #1ABED6;
+  margin-bottom: 0px;
+  text-shadow: 2px 2px  #39FF14;
+}
+
+header p {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+
+/*========== Animation Rules ==========*/
+#search-term:focus {
+  outline: none;
+}
+
+
+
+
+/*@media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
@@ -24,10 +90,6 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +97,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+}*/

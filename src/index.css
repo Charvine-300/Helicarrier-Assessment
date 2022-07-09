@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400;500;600&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  background-color: #000000;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +10,29 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+:root {
+  --scrollbar-thumb: #39FF14;
+  --scrollbar-track: #000000;
+}
+
+*::-webkit-scrollbar {
+  width: 0.6875rem;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 0.9375rem;
+  background: var(--scrollbar-track);
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 0.9375rem;
+  background: var(--scrollbar-thumb);
+}
+
+@font-face {
+  font-family: 'Schwifty';
+  src: url('./assets/get_schwifty.ttf');
+  font-style: normal;
 }
