@@ -39,5 +39,10 @@ Rick and Morty Web Application: List of Characters
        a page that is non-existent.
 
 
-// The three instances of the Filter component have a filter method attached to the
-   list of characters passed to them that respond to the value in the search bar.
+// The three instances of the Filter component have a 
+   filter method attached to the list of characters passed to them that respond to the value in the search bar.
+
+
+// This is the breakdown of my Rick and Morty Character Web
+   Application. View application live at: 
+   <https://rick-and-morty.vercel.app/>

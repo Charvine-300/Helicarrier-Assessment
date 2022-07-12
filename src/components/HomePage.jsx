@@ -24,7 +24,7 @@ const HomePage = ({ characterList}) => {
           onChange={(e) => setSearch(e.target.value)}
         />
         <div id="links">
-          <Link to="/characters"> 
+          <Link to="/"> 
             <button> Profiles </button>
           </Link>
           <Link to="/characters/humans"> 
@@ -46,19 +46,19 @@ const HomePage = ({ characterList}) => {
             characterList={characterList}
           />} 
         />
-        <Route path='humans' element={
+        <Route path='characters/humans' element={
           <Filter 
             filteredList={humanList.filter(human => human.name.toLowerCase().includes(search.toLowerCase()))}
             title='Humans'
           />} 
         />
-        <Route path='aliens' element={
+        <Route path='characters/aliens' element={
           <Filter 
             filteredList={alienList.filter(alien => alien.name.toLowerCase().includes(search.toLowerCase()))}
             title='Aliens'
           />} 
         />
-        <Route path='robots' element={
+        <Route path='characters/robots' element={
           <Filter 
             filteredList={robotList.filter(robot => robot.name.toLowerCase().includes(search.toLowerCase()))}
             title='Robots'

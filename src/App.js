@@ -74,7 +74,7 @@ function App() {
     <BrowserRouter>
       <>
         <Routes>
-          <Route path='/characters/*' element={
+          <Route path='/*' element={
             <HomePage
               characterList={characterList}
             />} 
