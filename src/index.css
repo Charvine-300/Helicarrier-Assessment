@@ -1,21 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400;500;600&display=swap');
 
-body {
-  margin: 0;
-  background-color: #000000;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-
 :root {
-  --scrollbar-thumb: #39FF14;
-  --scrollbar-track: #000000;
+  --scrollbar-thumb: #e7e5e5;
+  --scrollbar-track: #e7e5e5;
 }
 
 *::-webkit-scrollbar {
@@ -36,3 +23,16 @@ code {
   src: url('./assets/get_schwifty.ttf');
   font-style: normal;
 }
+
+body {
+  margin: 0;
+  background-color: #e7e5e5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+

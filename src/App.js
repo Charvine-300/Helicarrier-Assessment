@@ -1,18 +1,21 @@
 import './App.css';
+import Loading from './assets/sanchez_1.png';
+import HomePage from './components/HomePage';
 import { useQuery, gql } from '@apollo/client';
+import PageNotFound from './components/PageNotFound';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 
 //Creating an array that contains the list of IDs of the characters
 const IDS = [...Array(300).keys()].slice(1);
 
 //Creating batches of characters with different dates
-const FirstID = IDS.slice(0, 5);
-const SecondID = IDS.slice(70, 75);
-const ThirdID = IDS.slice(90, 95);
-const FourthID = IDS.slice(110, 115);
-const FifthID = IDS.slice(150, 155);
-const SixthID = IDS.slice(170, 175);
-const SeventhID = IDS.slice(200, 205);
-const EighthID = IDS.slice(270, 275);
+const FirstID = IDS.slice(0, 10);
+const SecondID = IDS.slice(70, 80);
+const ThirdID = IDS.slice(90, 100);
+const FourthID = IDS.slice(110, 120);
+const FifthID = IDS.slice(150, 160);
+const SixthID = IDS.slice(200, 210);
 
 //Concatenating all batches of IDs into one array for the query
 const allIDS = [
@@ -21,13 +24,11 @@ const allIDS = [
   ...ThirdID, 
   ...FourthID, 
   ...FifthID, 
-  ...SixthID, 
-  ...SeventhID, 
-  ...EighthID
+  ...SixthID
 ];
 
 
-//Query for fetch a list of characters from id 1 - 40
+//Query for fetch a list of characters from id 1 - 
 const getCharacters = gql`
   query getCharacters {
     characters: charactersByIds(ids: [${allIDS}]) {
@@ -36,6 +37,7 @@ const getCharacters = gql`
       status
       species
       type
+      gender
       image
       created
       location {
@@ -51,33 +53,36 @@ const getCharacters = gql`
 
 
 function App() {
+
+  //Fetching the data from the API using the query parameter
   const { loading, error, data } = useQuery(getCharacters);
 
-  if (loading) return <p> Loading... </p>;
+  if (loading) return (
+    <div className="Loader-header">
+      <img src={Loading} className="App-logo" alt="logo" />
+      <h1> Loading... </h1>
+    </div>
+  );
   if (error) return <p> Error :( </p>;
 
-  console.log(data.characters);
+
+  //Assigning fetched data to variable
   const characterList = data.characters;
 
-
+  
   return (
-    <>
-      <header>
-        <h1> Rick and Morty </h1>
-        <p> Characters </p>
-        <input type="text" id="search-term" placeholder='Search Character...' />
-      </header>
-      <div>
-        {characterList.map(character => (
-          <div className='App-header' key={character.id}>
-            <img src={character.image} alt={character.name} />
-            <div>
-              <h3> {character.name} </h3>
-            </div>
-          </div>
-        ))}
-      </div>
-    </>
+    <BrowserRouter>
+      <>
+        <Routes>
+          <Route path='/characters/*' element={
+            <HomePage
+              characterList={characterList}
+            />} 
+          />
+          <Route path='*' element={<PageNotFound />} />
+        </Routes>
+      </>
+    </BrowserRouter>
   );
 }
 
