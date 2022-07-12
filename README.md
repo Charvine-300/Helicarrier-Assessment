@@ -1,6 +1,7 @@
 # HeliCarrier Assessment for Frontend Engineer Role
 
 Rick and Morty Web Application: List of Characters
+
 // The selected GraphQL API for this application is the Rick and Morty GraphQL API.
 
 // Wrote a query to the GraphQL API to fetch a list of characters.
@@ -16,27 +17,26 @@ Rick and Morty Web Application: List of Characters
 // All the data needed from the GraphQL API is fetched in the App (root) Component
    and distributed to tree components. Further elaboration below:
 
-[List of components]: #components
+// List of components:
 
-[Profile Component]: #profile
+// Profile Component:
 
-    // This is the component which displays characters according to their ids in
-      chronological order.
+   This is the component which displays characters according to their ids in chronological order.
     
-    // The data fetched in the App component is passed as a prop into this component 
-       and filtered into 8 new arrays according to dates.
+   The data fetched in the App component is passed as aprop into this component and filtered into 8 new arrays according to dates.
     
-    // This component will not be affected by the search functionality since it will 
-       be labeled as the unique value column.
+   This component will not be affected by the search functionality since it will be labeled as the unique value column.
 
-[Filter Component]: #filter
-    // This component is used to filter the characters by their species.
+// Filter Component:
 
-    // There are three instances of this component, one for each species.
+   This component is used to filter the characters by their species.
 
-[Error Component]: #error
-    // This component is used to display an error message when the user visits 
-       a page that is non-existent.
+   There are three instances of this component, one for each species.
+
+// Error Component:
+
+   This component is used to display an error message when the user visits a page that is non-existent.
+
 
 
 // The three instances of the Filter component have a 
@@ -45,4 +45,4 @@ Rick and Morty Web Application: List of Characters
 
 // This is the breakdown of my Rick and Morty Character Web
    Application. View application live at: 
-   <https://rick-and-morty.vercel.app/>
+   <http://rick-and-morty-lovat-alpha.vercel.app/>
